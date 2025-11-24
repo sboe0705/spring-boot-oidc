@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+    Welcome, <span th:text="${user.name}" />.
+    You have the role <span th:text="${user.role}" /> and the following permissions:
+</p>
+<ul>
+    <li th:each="permission : ${user.permissions}" th:text="${permission}"></li>
+</ul>
+</body>
+</html>

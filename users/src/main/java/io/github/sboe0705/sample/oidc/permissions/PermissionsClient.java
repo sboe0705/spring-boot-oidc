@@ -1,6 +1,6 @@
 package io.github.sboe0705.sample.oidc.permissions;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -12,6 +12,12 @@ import java.util.List;
 @Service
 public class PermissionsClient {
 
+    @Value("${app.clients.permissions.host}")
+    private String host;
+
+    @Value("${app.clients.permissions.port}")
+    private int port;
+
     private final RestTemplate restTemplate;
 
     public PermissionsClient(RestTemplateBuilder restTemplateBuilder) {
@@ -20,7 +26,7 @@ public class PermissionsClient {
 
     public List<String> getPermissions() {
         return restTemplate.exchange(
-                "http://localhost:8082/permissions",
+                "http://%s:%d/permissions".formatted(host, port),
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<String>>() {

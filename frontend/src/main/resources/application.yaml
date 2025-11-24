@@ -1,0 +1,5 @@
+app:
+  clients:
+    users:
+      host: localhost
+      port: 8081

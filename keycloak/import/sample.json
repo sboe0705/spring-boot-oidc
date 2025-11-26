@@ -1,0 +1,26 @@
+{
+  "realm": "sample",
+  "displayName": "OIDC Sample Application",
+  "enabled": true,
+  "clients" : [ {
+    "clientId" : "frontend",
+    "name" : "OIDC Sample Application - Frontend",
+    "enabled" : true,
+    "secret" : "TbQqeNTSoG8lCa5Y2EOxiVmkZbr6zbNA",
+    "redirectUris" : [ "http://localhost:8080/*" ],
+    "webOrigins" : [ "http://localhost:8080" ]
+  } ],
+  "users" : [ {
+    "username" : "bob",
+    "firstName" : "Bob",
+    "lastName" : "Brown",
+    "email" : "bob@mail",
+    "emailVerified" : true,
+    "enabled" : true,
+    "credentials" : [ {
+      "type" : "password",
+      "secretData" : "{\"value\":\"kovAQZ5TBPHZ1F6ERT8D1ErS3saOSAf4vNPx46J+WO4=\",\"salt\":\"oaqAite1mK2/gnotlja2aQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ]
+  } ]
+}

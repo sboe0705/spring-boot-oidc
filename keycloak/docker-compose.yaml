@@ -18,9 +18,11 @@ services:
     image: quay.io/keycloak/keycloak:26.4.5
     command: start-dev --import-realm
     ports:
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8090:8080"
       - "127.0.0.1:9000:9000"
     environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
       KC_DB: postgres
       KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
       KC_DB_USERNAME: keycloak

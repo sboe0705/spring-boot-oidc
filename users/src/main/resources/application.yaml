@@ -1,7 +1,13 @@
-server:
-  port : 8081
 app:
   clients:
     permissions:
       host: localhost
       port: 8082
+server:
+  port : 8081
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/sample

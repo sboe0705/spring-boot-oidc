@@ -21,6 +21,14 @@
       "type" : "password",
       "secretData" : "{\"value\":\"kovAQZ5TBPHZ1F6ERT8D1ErS3saOSAf4vNPx46J+WO4=\",\"salt\":\"oaqAite1mK2/gnotlja2aQ==\",\"additionalParameters\":{}}",
       "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
-    } ]
+    } ],
+    "groups" : [ "/user" ]
+  } ],
+  "groups" : [ {
+    "name" : "admin"
+  }, {
+    "name" : "manager"
+  }, {
+    "name" : "user"
   } ]
 }

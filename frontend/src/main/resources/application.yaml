@@ -3,6 +3,7 @@ app:
     users:
       host: localhost
       port: 8081
+      registrationId: sample
 server:
   port : 8080
 spring:
@@ -14,7 +15,11 @@ spring:
             client-id: frontend
             client-secret: TbQqeNTSoG8lCa5Y2EOxiVmkZbr6zbNA
             authorization-grant-type: authorization_code
-            scope: openid,profile,email
+            scope:
+              - openid
+              - profile
+              - email
+              - roles
         provider:
           sample:
             issuer-uri: http://localhost:8090/realms/sample

@@ -11,6 +11,19 @@
     "webOrigins" : [ "http://localhost:8080" ]
   } ],
   "users" : [ {
+    "username" : "alice",
+    "firstName" : "Alice",
+    "lastName" : "Anderson",
+    "email" : "alice@mail",
+    "emailVerified" : true,
+    "enabled" : true,
+    "credentials" : [ {
+      "type" : "password",
+      "secretData" : "{\"value\":\"TNemh+dWAa1khBIXxmFc5I3yKf+9VZKOMOa/Kcn1caY=\",\"salt\":\"gfZMQIkzNZrHYKR6jHVfSQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "groups" : [ "/manager" ]
+  }, {
     "username" : "bob",
     "firstName" : "Bob",
     "lastName" : "Brown",
@@ -23,6 +36,19 @@
       "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
     } ],
     "groups" : [ "/user" ]
+  }, {
+    "username" : "carol",
+    "firstName" : "Carol",
+    "lastName" : "Cipherwind",
+    "email" : "carol@mail",
+    "emailVerified" : true,
+    "enabled" : true,
+    "credentials" : [ {
+      "type" : "password",
+      "secretData" : "{\"value\":\"xLKO0QrTQ0se7PJcE/i6TqAb/fRubAGw9Dz2Us3HIzU=\",\"salt\":\"ATjEfs3mnsZhqmwCULeuTA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "groups" : [ "/admin" ]
   } ],
   "groups" : [ {
     "name" : "admin"
